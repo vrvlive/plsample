@@ -1,0 +1,14 @@
+auto_select_gpus: true
+batch_size: 512
+checkpoint_name: ./checkpoint/final.ckpt
+data_folder: ./data/test_1
+default_root_dir: ./logs
+deterministic: true
+fast_dev_run: false
+gpus: -1
+learning_rate: 0.02
+max_epochs: 450
+num_workers: 6
+test_input: test.csv
+test_output: test_pred.csv
+train_input: train.csv
