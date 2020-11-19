@@ -54,13 +54,3 @@ class PlDNNModule(pl.LightningModule):
     def validation_epoch_end(self, outputs):
         avg_val_loss = th.stack([list(x)[0] for x in outputs]).mean()
         self.log('avg_val_loss', avg_val_loss)
-
-    def test_step(self, batch, batch_idx):
-        loss, _ = self.shared_step(batch, batch_idx)
-        self.log('test_loss', loss)
-        return {'test_loss': loss}
-
-    def test_epoch_end_removed(self, outputs):
-        avg_loss = th.stack([x['test_loss'] for x in outputs]).mean()
-        self.log('test_loss', avg_loss)
-        return {'avg_test_loss': avg_loss}

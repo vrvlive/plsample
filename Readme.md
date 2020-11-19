@@ -1,4 +1,4 @@
-# Test 1 Solution
+# Regression Sample with PyTorch-Lightning
 
 This repository contains the solution to the problem outlined in [instructions](instructions.md), along with the model, training code in pytorch with pytorch-lightning, results and tensorboard logs collected during training.
 
